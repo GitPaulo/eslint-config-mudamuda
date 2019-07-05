@@ -5,7 +5,7 @@ module.exports = {
 		node: true
     },
     globals: {
-        MyGlobal: true
+        __dirname: true,
     },
     rules: {
         semi: [2, "always"]
