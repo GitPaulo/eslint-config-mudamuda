@@ -26,3 +26,9 @@ Afterwards, add the config to `eslintrc.js` or `eslintrc.json`:
 	"extends": "mudamuda"
 }
 ```
+Extended rule sets are also available to JavaScript frameworks & environments:
+```js
+{
+	"extends": "mudamuda/node"
+}
+```
