@@ -18,7 +18,7 @@ A [sharable eslint config](https://eslint.org/docs/developer-guide/shareable-con
 
 Happy coding!
 # Installation & Usage
-`npm install --dev eslint-config-mudamuda`
+`npm install --save-dev eslint-config-mudamuda`
 
 Afterwards, add the config to `eslintrc.js` or `eslintrc.json`:
 ```js
