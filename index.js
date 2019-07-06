@@ -81,8 +81,8 @@ module.exports = {
         "no-useless-rename": "error",
         // [38] Error on useless escape characters
         "no-useless-escape": "error",
-        // [39] Error on padding within blocks
-        "padded-blocks": ["error", "always"],
+        // [39] Error on padding within blocks (start and end of block space)
+        "padded-blocks": ["error", "never"],
         // [40, 41, 42, 43, 44, 45, 46] Spacing
         "rest-spread-spacing": ["error", "never"],
         "semi-spacing": "error",
