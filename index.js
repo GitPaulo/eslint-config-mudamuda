@@ -3,8 +3,8 @@ module.exports = {
         ecmaVersion: 2019
     },
     rules: {
-        // [1] Four space indent
-        "indent": ["error", 4],
+        // [1] Four space indent warning
+        "indent": ["warn", 4],
         // [2] Single quotes '' always but allow ``
         "quotes": ["error", "single", {
             "allowTemplateLiterals": true
@@ -24,7 +24,7 @@ module.exports = {
         // [9] Enforce '1tbs' brace style
         "brace-style": "error",
         // [10] Enforce curly brackets on all statements that may have them.
-        "curly": "error",
+        "curly": "warn",
         // [11] Always handle 'err' on callback
         "handle-callback-err": "error",
         // [12] Error on undefined variables. (enforcement of global declarations)
@@ -42,7 +42,7 @@ module.exports = {
         // [18] Disallows trailing comma
         "comma-dangle": ["error", "never"],
         // [19] The dot in a member expression should be on the same line as the object portion
-        "dot-location": ["error", "object"],
+        "dot-location": ["warn", "object"],
         // [20] Enforce files end with EOF \n
         "eol-last": ["error", "always"],
         // [21] No space between function identifiers and their invocations
@@ -56,9 +56,9 @@ module.exports = {
         // [25] Error on duplicate import statements
         "no-duplicate-imports": "error",
         // [26] Error on extra function binding
-        "no-extra-bind": "error",
+        "no-extra-bind": "warn",
         // [27] Error on unecessary parethesis around functione expressions
-        "no-extra-parens": "error",
+        "no-extra-parens": "warn",
         // [28] Error on fallthrough in switch statements
         "no-fallthrough": "error",
         // [29] Error on invalid regexp constructors
@@ -70,19 +70,19 @@ module.exports = {
         // [32] Error on self assignments
         "no-self-assign": "error",
         // [33] NO TABS!!!!!!
-        "no-tabs": "error",
+        "no-tabs": "warn",
         // [34] Enforce, 'super' must be called before 'this' in constructor
         "no-this-before-super": "error",
         // [35] Error on unreachable code
         "no-unreachable": "error",
         // [36] Error on empty contructors (may omit)
-        "no-useless-constructor": "error",
+        "no-useless-constructor": "warn",
         // [37] Error on useless var renames
         "no-useless-rename": "error",
         // [38] Error on useless escape characters
         "no-useless-escape": "error",
         // [39] Error on padding within blocks (start and end of block space)
-        "padded-blocks": ["error", "never"],
+        "padded-blocks": ["warn", "never"],
         // [40, 41, 42, 43, 44, 45, 46] Spacing
         "rest-spread-spacing": ["error", "never"],
         "semi-spacing": "error",
@@ -96,11 +96,11 @@ module.exports = {
         // [48] Enforce parenthesis in IIFEs
         "wrap-iife": ["error", "outside"],
         // [49] Avoid magic numbers of left side of expressions
-        "yoda": "error",
+        "yoda": "warn",
         // [50] Always semicolon!
         "semi": [2, "always"],
         // [51] Error on loop counter moving oposing direction of expression
-        "for-direction": "error",
+        "for-direction": "warn",
         // [52] Enforce return statements in getters
         "getter-return": "error",
         // [53] Error on executor function in promises from being async (so that promise always rejects)
