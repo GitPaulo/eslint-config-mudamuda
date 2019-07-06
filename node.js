@@ -18,6 +18,7 @@ module.exports = {
         clearTimeout: true,
     },
     rules: {
+        // [1] Enforce valid js doc statements
         'valid-jsdoc': ['warn', {
 			requireReturn: false,
 			requireReturnDescription: false,
@@ -31,10 +32,13 @@ module.exports = {
 				'date': 'Date',
 				'error': 'Error'
 			}
-		}],
-		'array-callback-return': 'error',
-		'object-shorthand': ['error', 'always'],
-		'prefer-destructuring': ['error', {
+        }],
+        // [2] If we forget to write return statement in a callback for the array lib methods, it’s probably a mistake!
+        'array-callback-return': 'error',
+        // [3] Enforce that object shorthand will be used whenever possible.
+        'object-shorthand': ['error', 'always'],
+        // [4] Warn prefering destructuring
+		'prefer-destructuring': ['warn', {
 			VariableDeclarator: {
 				array: false,
 				object: true
@@ -44,6 +48,7 @@ module.exports = {
 				object: false
 			}
         }], 
+        // [5] It is considered good practice to only pass instances of the built-in Error object to the reject() function for user-defined errors in Promises.
         'prefer-promise-reject-errors': 'error',
     }
 };

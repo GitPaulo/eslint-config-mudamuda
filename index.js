@@ -32,7 +32,7 @@ module.exports = {
         // [13] No newline spam
         "no-multiple-empty-lines": "error",
         // [14] Enforce consistent linebreak style for operators (before operators) ---> 'let x = "str1"\n+ "str2"\n+ "str3"'
-        "eslint operator-linebreak": ["error", "before"],
+        "operator-linebreak": ["error", "before"],
         // [15] Disallow assignment operators in conditional statements but accept if they are in parethesis. ---> while ((x=5) && x < 10) {}
         "no-cond-assign": ["error", "except-parens"],
         // [16] Disallow or enforce spaces inside of blocks after opening block and before closing block
@@ -47,46 +47,46 @@ module.exports = {
         "eol-last": ["error", "always"],
         // [21] No space between function identifiers and their invocations
         "func-call-spacing": ["error", "never"],
-        // [22] Block stupid use of super
+        // [22] Error on stupid use of super
         "constructor-super": "error",
-        // [23] Block modifying 'const' variables
+        // [23] Error on modifying 'const' variables
         "no-const-assign": "error",
-        // [24] Block duplicate arguments in functions
+        // [24] Error on duplicate arguments in functions
         "no-dupe-args": "error",
-        // [25] Block duplicate import statements
+        // [25] Error on duplicate import statements
         "no-duplicate-imports": "error",
-        // [26] Block extra function binding
+        // [26] Error on extra function binding
         "no-extra-bind": "error",
-        // [27] Block unecessary parethesis around functione expressions
+        // [27] Error on unecessary parethesis around functione expressions
         "no-extra-parens": "error",
-        // [28] Block fallthrough in switch statements
+        // [28] Error on fallthrough in switch statements
         "no-fallthrough": "error",
-        // [29] Block invalid regexp constructors
+        // [29] Error on invalid regexp constructors
         "no-invalid-regexp": "error",
-        // [30] Block irregular whitespace
+        // [30] Error on irregular whitespace
         "no-irregular-whitespace": "error",
-        // [31] Block label VS var identifier matching
+        // [31] Error on label VS var identifier matching
         "no-label-var": "error",
-        // [32] Block self assignments
+        // [32] Error on self assignments
         "no-self-assign": "error",
         // [33] NO TABS!!!!!!
         "no-tabs": "error",
         // [34] Enforce, 'super' must be called before 'this' in constructor
         "no-this-before-super": "error",
-        // [35] Block unreachable code
+        // [35] Error on unreachable code
         "no-unreachable": "error",
-        // [36] Block empty contructors (may omit)
+        // [36] Error on empty contructors (may omit)
         "no-useless-constructor": "error",
-        // [37] Block useless var renames
+        // [37] Error on useless var renames
         "no-useless-rename": "error",
-        // [38] Block useless escape characters
+        // [38] Error on useless escape characters
         "no-useless-escape": "error",
-        // [39] Block padding within blocks
+        // [39] Error on padding within blocks
         "padded-blocks": ["error", "always"],
         // [40, 41, 42, 43, 44, 45, 46] Spacing
         "rest-spread-spacing": ["error", "never"],
         "semi-spacing": "error",
-        "pace-before-blocks": "error",
+        "space-before-blocks": "error",
         "space-in-parens": ["error", "never"],
         "space-unary-ops": "error",
         "spaced-comment": ["error", "always"],
@@ -98,6 +98,20 @@ module.exports = {
         // [49] Avoid magic numbers of left side of expressions
         "yoda": "error",
         // [50] Always semicolon!
-        "semi": [2, "always"]
+        "semi": [2, "always"],
+        // [51] Error on loop counter moving oposing direction of expression
+        "for-direction": "error",
+        // [52] Enforce return statements in getters
+        "getter-return": "error",
+        // [53] Error on executor function in promises from being async (so that promise always rejects)
+        "no-async-promise-executor": "error",
+        // [54] Warn -0 comparisons. Code like x === -0 will pass for both +0 and -0. This is better: Object.is(x, -0).
+        "no-compare-neg-zero": "warn",
+        // [55] Error on extra semicolons
+        "no-extra-semi": "error",
+        // [56] Warn about race conditions
+        "require-atomic-updates": "warn",
+        // [57] It is usually a typing mistake to compare the result of a typeof operator to other string literals.
+        "valid-typeof": "error"
     }
 };
