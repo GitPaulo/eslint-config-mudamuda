@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mudamuda",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A sharable eslint configuration package.",
   "main": "index.js",
   "scripts": {
