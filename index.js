@@ -10,7 +10,7 @@ module.exports = {
         // Enforces that a return statement is present in property getters 
         'getter-return': 'error',
         // Disallow using an async function as a Promise executor
-        'async-promise-executor': 'warn',
+        'no-async-promise-executor': 'warn',
         // Disallow await inside of loops
         'no-await-in-loop': 'off',
         // Disallow comparing against -0
@@ -40,7 +40,7 @@ module.exports = {
         // Disallow unnecessary boolean casts
         'no-extra-boolean-cast': 'warn',
         // Disallow unnecessary parethesis
-        'no-extra-parens': 'warn',
+        'no-extra-parens': 'off',
         // Disallow extra semi colons
         'no-extra-semi': 'error',
         // disallow reassigning function declarations
@@ -87,7 +87,7 @@ module.exports = {
         // Enforce the use of variables within the scope they are defined
         'block-scoped-var': 'warn',
         // Enforce that class methods utilize this
-        'class-methods-use-this': 'error',
+        'class-methods-use-this': 'warn',
         // Enforce a maximum cyclomatic complexity allowed in a program
         'complexity': 'warn',
         // Require return statements to either always or never specify values
@@ -111,7 +111,7 @@ module.exports = {
         // Disallow the use of arguments.caller or arguments.callee
         'no-caller': 'warn',
         // Disallow lexical declarations in case clauses
-        'no-case-declarations': 'error',
+        'no-case-declarations': 'warn',
         // Disallow division operators explicitly at the beginning of regular expressions
         'no-div-regex': 'off',
         // Disallow else blocks after return statements in if statements
@@ -155,7 +155,7 @@ module.exports = {
         // Disallow magic numbers
         'no-magic-numbers': 'off',
         // Disallow multiple spaces
-        'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+        'no-multi-spaces': 'off',
         // Disallow multiline strings
         'no-multi-str': 'warn',
         // Disallow new operators outside of assignments or comparisons
@@ -187,7 +187,7 @@ module.exports = {
         // Disallow comparisons where both sides are exactly the same
         'no-self-compare': 'error',
         // Disallow comma operators
-        'no-sequences': 'error',
+        'no-sequences': 'off',
         // Disallow throwing literals as exceptions
         'no-throw-literal': 'error',
         // Disallow unmodified loop conditions
@@ -197,7 +197,7 @@ module.exports = {
         // Disallow unused labels
         'no-unused-labels': 'error',
         // Disallow unnecessary calls to .call() and .apply()
-        'no-useless-call': 'warm',
+        'no-useless-call': 'warn',
         // Disallow unnecessary ccatch
         'no-useless-catch': 'warn',
         // Disallow unnecessary concatenation of literals or template literals
@@ -269,9 +269,9 @@ module.exports = {
         // Disallow or enforce spaces inside of blocks after opening block and before closing block
         'block-spacing': ['error', 'always'],
         // Require Brace Style
-        'brace-style': ['error', '1tbs'],
+        'brace-style': ['error', '1tbs', { allowSingleLine: true }],
         // Require CamelCase
-        'camelcase': ['error', 'always', { ignoreDestructuring: true }],
+        'camelcase': 'error',
         // Enforce or disallow capitalization of the first letter of a comment
         'capitalized-comments': ['warn', 'always'],
         // Require or disallow trailing commas
@@ -283,7 +283,7 @@ module.exports = {
         // Disallow or enforce spaces inside of computed properties 
         'computed-property-spacing': ['error', 'never'],
         // Require Consistent This
-        'consistent-this': ['error', ['self', 'that']],
+        'consistent-this': ['warn', 'self'],
         // Require or disallow newline at the end of files
         'eol-last': ['error', 'always'],
         // Require or disallow spacing between function identifiers and their invocations
@@ -295,17 +295,17 @@ module.exports = {
         // Enforce the consistent use of either function declarations or expressions
         'func-style': 'off',
         // Enforce consistent line breaks inside function parentheses
-        'function-paren-newline': ['error', 'consistent'],
+        'function-paren-newline': ['warn', 'consistent'],
         // Disallow specified identifiers
         'id-blacklist': 'off',
         // Enforce minimum and maximum identifier lengths
-        'id-length': ["warn", { "min": 15 }],
+        'id-length': ["warn", { "min": 0, "max": 25 }],
         // Require identifiers to match a specified regular expression
         'id-match': 'off',
         // SPACES REEEEEEEEEEEEEEEE
-        'indent': ['error', 'space', 4, { SwitchCase: 4 }],
+        'indent': ['error', 4, { SwitchCase: 1 }],
         // Single quotes or die!
-        'jsx-quotes': ['error', 'single'],
+        'jsx-quotes': ['error', 'prefer-single'],
         // Enforce consistent spacing between keys and values in object literal properties
         'key-spacing': 'off',
         // Enforce consistent spacing before and after keywords
@@ -313,7 +313,7 @@ module.exports = {
         // Enforce position of line comments
         'line-comment-position': 'off',
         // Enforce consistent linebreak style
-        'linebreak-style': ['error', 'unix'],
+        'linebreak-style': ["error", "windows"],
         // Require empty lines around comments
         'lines-around-comment': 'off',
         // Require or disallow an empty line between class members
@@ -329,7 +329,7 @@ module.exports = {
         // Enforce a maximum parameter number
         'max-params': ["warn", 5],
         // Enforce a maximum statements number
-        'max-statements': ["warn", 5],
+        'max-statements': ["warn", 50],
         // Enforce a maximum statements per line
         'max-statements-per-line': ['error', { max: 1 }],
         // Enforce multiline comment style
@@ -341,7 +341,7 @@ module.exports = {
         // Enforce or disallow parentheses when invoking a constructor with no arguments
         'new-parens': 'error',
         // Require a newline after each call in a method chain
-        'newline-per-chained-call': ['error', { ignoreChainWithDepth: 3 }],
+        'newline-per-chained-call': 'off',
         // Disallow Array constructors
         'no-array-constructor': 'off',
         // Disallow bitwise operators
@@ -353,15 +353,15 @@ module.exports = {
         // Disallow if statements as the only statement in else blocks
         'no-lonely-if': 'error',
         // Disallow mixed binary operators
-        'no-mixed-operators': 'error',
+        'no-mixed-operators': 'warn',
         // Disallow mixed spaces and tabs for indentation
         'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
         // Disallow use of chained assignment expressions
-        'no-multi-assign': 'warn',
+        'no-multi-assign': 'off',
         // Disallow multiple empty lines
         'no-multiple-empty-lines': 'error',
         // Disallow negated conditions
-        'no-negated-condition': 'warn',
+        'no-negated-condition': 'off',
         // Disallow nested ternary expressions
         'no-nested-ternary': 'off',
         // Disallow Object constructors
@@ -397,7 +397,7 @@ module.exports = {
         // Require or disallow assignment operator shorthand where possible
         'operator-assignment': ['error', 'always'],
         // Enforce consistent linebreak style for operators
-        'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
+        'operator-linebreak': ['error', 'before'],
         // Require or disallow padding within blocks
         'padded-blocks': ['error', 'never'],
         // Require or disallow padding lines between statements
@@ -421,7 +421,7 @@ module.exports = {
         // Enforce consistent spacing before blocks
         'space-before-blocks': ['error', 'always'],
         // Enforce consistent spacing before function definition opening parenthesis
-        'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
+        'space-before-function-paren': ["error", "always"],
         // Enforce consistent spacing inside parentheses
         'space-in-parens': ['error', 'never'],
         // Require spacing around infix operators
@@ -444,7 +444,7 @@ module.exports = {
         // Require braces around arrow function bodies
         'arrow-body-style': ['error', 'as-needed'],
         // Require parentheses around arrow function arguments
-        'arrow-parens': ['error', 'as-needed', { requireForBlockBody: false }],
+        'arrow-parens': ['error', 'always'],
         // Enforce consistent spacing before and after the arrow in arrow functions
         'arrow-spacing': ['error', { before: true, after: true }],
         // Require super() calls in constructors
@@ -480,7 +480,7 @@ module.exports = {
         // Require using arrow functions for callbacks
         'prefer-arrow-callback': 'error',
         // Require const declarations for variables that are never reassigned after declared
-        'prefer-const': ['error', { destructuring: 'all' }],
+        'prefer-const': ['warn', { destructuring: 'all' }],
         // Require destructuring from arrays and/or objects
         'prefer-destructuring': 'warn',
         // Disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
