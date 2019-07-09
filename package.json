@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mudamuda",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A sharable eslint configuration package.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "muda"
   ],
   "author": "GitPaulo",
-  "license": "ISC",
+  "license": "GPL v2.0",
   "bugs": {
     "url": "https://github.com/GitPaulo/eslint-config-mudamuda/issues"
   },
