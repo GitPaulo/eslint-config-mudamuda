@@ -102,7 +102,7 @@ module.exports = {
         // Enforce consistent newlines before and after dots
         'dot-location': ['error', 'property'],
         // Enforce dot notation whenever possible
-        'dot-notation': ['error', { allowKeywords: true, allowPattern: '(^[A-Z])|(^[a-z]+(_[a-z]+)+$)' }],
+        'dot-notation': ['warn', { allowKeywords: true, allowPattern: '(^[A-Z])|(^[a-z]+(_[a-z]+)+$)' }],
         // Require the use of === and !==
         'eqeqeq': ['error', 'smart'],
         // Require for-in loops to include an if statement
@@ -415,7 +415,7 @@ module.exports = {
         // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.
         'prefer-object-spread': 'warn',
         // Require quotes around object literal property names
-        'quote-props': ['error', 'consistent-as-needed', { keywords: true, unnecessary: true, numbers: false }],
+        'quote-props': ['warn', 'consistent-as-needed', { keywords: true, unnecessary: true, numbers: false }],
         // Enforce the consistent use of either backticks, double, or single quotes
         'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
         // Require or disallow semicolons instead of ASI
