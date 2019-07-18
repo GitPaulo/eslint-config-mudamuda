@@ -35,7 +35,7 @@ module.exports = {
         // Disallow duplicate case labels
         'no-duplicate-case': 'error',
         // Disallow empty block statements
-        'no-empty': 'warn',
+        'no-empty': 'error',
         // Disallow empty character classes in regular expressions
         'no-empty-character-class': 'error',
         // Disallow reassigning exceptions in catch clauses
@@ -92,13 +92,13 @@ module.exports = {
         // Enforce that class methods utilize this
         'class-methods-use-this': 'warn',
         // Enforce a maximum cyclomatic complexity allowed in a program
-        'complexity': 'warn',
+        'complexity': 'off',
         // Require return statements to either always or never specify values
         'consistent-return': 'off',
         // Enforce consistent brace style for all control statements
         'curly': 'error',
         // Require default cases in switch statements
-        'default-case': 'warn',
+        'default-case': 'error',
         // Enforce consistent newlines before and after dots
         'dot-location': ['error', 'property'],
         // Enforce dot notation whenever possible
@@ -120,9 +120,9 @@ module.exports = {
         // Disallow else blocks after return statements in if statements
         'no-else-return': 'warn',
         // Disallow empty functions
-        'no-empty-function': 'warn',
+        'no-empty-function': 'error',
         // Disallow empty destructuring patterns
-        'no-empty-pattern': 'warn',
+        'no-empty-pattern': 'error',
         // Disallow null comparisons without type-checking operators
         'no-eq-null': 'warn',
         // Disallow the use of eval()
@@ -258,7 +258,7 @@ module.exports = {
         // Disallow the use of undefined as an identifier
         'no-undefined': 'error',
         // Disallow unused variables
-        'no-unused-vars': 'warn',
+        'no-unused-vars': ['error', { 'args': 'after-used' }],
         // Disallow the use of variables before they are defined
 
         /****** Stylistic Issues ******/
@@ -322,9 +322,9 @@ module.exports = {
         // Require or disallow an empty line between class members
         'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
         // Enforce a maximum depth that blocks can be nested
-        'max-depth': ['warn', 4],
+        'max-depth': ['warn', 5],
         // Enforce a maximum line length
-        'max-len': ['warn', 125],
+        'max-len': ['warn', 140],
         // Enforce a maximum file lines number
         'max-lines': ['warn', 1000],
         // Enforce a maximum nested callbacks
@@ -332,7 +332,7 @@ module.exports = {
         // Enforce a maximum parameter number
         'max-params': ['warn', 5],
         // Enforce a maximum statements number
-        'max-statements': ['warn', 50],
+        'max-statements': 'off',
         // Enforce a maximum statements per line
         'max-statements-per-line': ['error', { max: 1 }],
         // Enforce multiline comment style
@@ -386,7 +386,7 @@ module.exports = {
         // Disallow whitespace before properties
         'no-whitespace-before-property': 'error',
         // Enforce the location of single-line statements
-        'nonblock-statement-body-position': ["error", "below"],
+        'nonblock-statement-body-position': ['error', 'below'],
         // Enforce consistent line breaks inside braces
         'object-curly-newline': ['error', { multiline: true, consistent: true }],
         // Enforce consistent spacing inside braces
@@ -500,7 +500,7 @@ module.exports = {
         // Require spread operators instead of .apply()
         'prefer-spread': 'error',
         // Require template literals instead of string concatenation
-        'prefer-template': 'warn',
+        'prefer-template': 'off',
         // Require generator functions to contain yield
         'require-yield': 'warn',
         // Enforce spacing between rest and spread operators and their expressions
