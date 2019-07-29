@@ -4,19 +4,6 @@ module.exports = {
         es6: true,
         node: true
     },
-    globals: {
-        __dirname: true,
-        __filename: true,
-        console: true,
-        process: true,
-        buffer: true,
-        setImmediate: true,
-        setInterval: true,
-        setTimeout: true,
-        clearImmediate: true,
-        clearInterval: true,
-        clearTimeout: true,
-    },
     rules: {
         // Enforce valid js doc statements
         'valid-jsdoc': ['warn', {
