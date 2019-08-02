@@ -294,7 +294,7 @@ module.exports = {
         // Require function names to match the name of the variable or property to which they are assigned
         'func-name-matching': ['warn', 'always'],
         // Require or disallow named function expressions
-        'func-names': ['warn', 'as-needed'],
+        'func-names': 'off',
         // Enforce the consistent use of either function declarations or expressions
         'func-style': 'off',
         // Enforce consistent line breaks inside function parentheses
