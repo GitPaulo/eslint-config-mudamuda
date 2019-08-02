@@ -224,7 +224,7 @@ module.exports = {
         // Disallow async functions which have no await expression
         'require-await': 'off',
         // enforce the use of u flag on RegExp
-        'require-unicode-regexp': 'warn', 
+        'require-unicode-regexp': 'off', 
         // Require var declarations be placed at the top of their containing scope
         'vars-on-top': 'off',
         // Require parentheses around immediate function invocations
