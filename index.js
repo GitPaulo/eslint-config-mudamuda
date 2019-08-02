@@ -128,7 +128,7 @@ module.exports = {
         // Disallow the use of eval()
         'no-eval': 'warn',
         // Disallow extending native types
-        'no-extend-native': 'warn',
+        'no-extend-native': 'off',
         // Disallow unnecessary calls to .bind()
         'no-extra-bind': 'warn',
         // Disallow unnecessary labels
