@@ -114,7 +114,7 @@ module.exports = {
         // Disallow the use of arguments.caller or arguments.callee
         'no-caller': 'warn',
         // Disallow lexical declarations in case clauses
-        'no-case-declarations': 'warn',
+        'no-case-declarations': 'error',
         // Disallow division operators explicitly at the beginning of regular expressions
         'no-div-regex': 'off',
         // Disallow else blocks after return statements in if statements
@@ -258,8 +258,7 @@ module.exports = {
         // Disallow the use of undefined as an identifier
         'no-undefined': 'error',
         // Disallow unused variables
-        'no-unused-vars': ['error', { 'args': 'after-used' }],
-        // Disallow the use of variables before they are defined
+        'no-unused-vars': ['error', { 'vars': 'local', 'args': 'after-used', "varsIgnorePattern": '\_(\w)*' }],
 
         /****** Stylistic Issues ******/
         
@@ -276,7 +275,7 @@ module.exports = {
         // Require CamelCase
         'camelcase': 'error',
         // Enforce or disallow capitalization of the first letter of a comment
-        'capitalized-comments': ['warn', 'always'],
+        'capitalized-comments': ['warn', 'always', { "ignorePattern": "\/(\w)*" }],
         // Require or disallow trailing commas
         'comma-dangle': ['error', 'never'],
         // Enforce consistent spacing before and after commas
@@ -324,7 +323,7 @@ module.exports = {
         // Enforce a maximum depth that blocks can be nested
         'max-depth': ['warn', 5],
         // Enforce a maximum line length
-        'max-len': ['warn', 140],
+        'max-len': ['warn', 160],
         // Enforce a maximum file lines number
         'max-lines': ['warn', 1000],
         // Enforce a maximum nested callbacks
@@ -490,9 +489,9 @@ module.exports = {
         // Require using arrow functions for callbacks
         'prefer-arrow-callback': 'error',
         // Require const declarations for variables that are never reassigned after declared
-        'prefer-const': ['warn', { destructuring: 'all' }],
+        'prefer-const': 'off',
         // Require destructuring from arrays and/or objects
-        'prefer-destructuring': 'warn',
+        'prefer-destructuring': 'off',
         // Disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
         'prefer-numeric-literals': 'off',
         // Require rest parameters instead of arguments
