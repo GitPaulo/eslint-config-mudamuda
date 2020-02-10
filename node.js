@@ -25,16 +25,7 @@ module.exports = {
         // Enforce that object shorthand will be used whenever possible.
         'object-shorthand': ['error', 'always'],
         // Warn prefering destructuring
-        'prefer-destructuring': ['warn', {
-            VariableDeclarator: {
-                array: false,
-                object: true
-            },
-            AssignmentExpression: {
-                array: true,
-                object: false
-            }
-        }],
+        'prefer-destructuring': 'off',
         // It is considered good practice to only pass instances of the built-in Error object to the reject() function for user-defined errors in Promises.
         'prefer-promise-reject-errors': 'error',
     }
