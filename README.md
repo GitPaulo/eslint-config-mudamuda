@@ -1,5 +1,7 @@
 # eslint-config-mudamuda
-A [sharable eslint config](https://eslint.org/docs/developer-guide/shareable-configs.html). Use it if you like my style \o/
+A [sharable eslint config](https://eslint.org/docs/developer-guide/shareable-configs.html).
+
+Use it if you like my JS coding style :)
 
 <div align="center">
 	<p>
